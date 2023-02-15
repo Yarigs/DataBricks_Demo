@@ -1,0 +1,44 @@
+{
+	"name": "Customers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "yissy-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "customers.json",
+				"fileSystem": "yisfs"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"CustomerId": {
+					"type": "integer"
+				},
+				"Active": {
+					"type": "boolean"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Address": {
+					"type": "string"
+				},
+				"City": {
+					"type": "string"
+				},
+				"Country": {
+					"type": "string"
+				},
+				"Email": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
