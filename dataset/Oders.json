@@ -1,0 +1,32 @@
+{
+	"name": "Oders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "yissy-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "orders.json",
+				"fileSystem": "yisfs"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"OrderId": {
+					"type": "integer"
+				},
+				"CustomerId": {
+					"type": "integer"
+				},
+				"Date": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
