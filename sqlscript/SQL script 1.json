@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "\n\ncreate view TempoJSON\nas\nselect \n    JSON_VALUE(doc, '$.SaleId') AS SalesId,\n    JSON_VALUE(doc, '$.Quantity') AS Quantity\nfrom openrowset(\n        bulk 'https://yissa.dfs.core.windows.net/yisfs/sales.json',\n        format = 'csv',\n        fieldterminator ='0x0b',\n        fieldquote = '0x0b'\n    ) with (doc NVARCHAR(MAX)) as rows\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sqldedic",
+				"poolName": "sqldedic"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
