@@ -30,7 +30,13 @@
 						"type": "SqlPoolSink",
 						"allowCopyCommand": true
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "yissy-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -114,7 +120,13 @@
 						"type": "SqlPoolSink",
 						"allowCopyCommand": true
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "yissy-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -189,7 +201,13 @@
 						"type": "SqlPoolSink",
 						"allowCopyCommand": true
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "yissy-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -255,7 +273,13 @@
 						"type": "SqlPoolSink",
 						"allowCopyCommand": true
 					},
-					"enableStaging": false,
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "yissy-WorkspaceDefaultStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
