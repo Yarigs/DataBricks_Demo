@@ -1,0 +1,17 @@
+{
+	"name": "Create Tables",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE dbo.Sales\n(\n    SaleId int not null,\n    OrderId int not null,\n    ProductId int not null,\n    Quantity DECIMAL\n)\nWITH\n(\n    DISTRIBUTION = HASH (SaleID),\n    CLUSTERED COLUMNSTORE INDEX\n)\nGO\n\nCREATE TABLE dbo.dimOrder\n(\n    OrderId int identity not null,\n    CustomerID int not null,\n    Date DATE\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE\n)\nGO\n\nCREATE TABLE dbo.dimCustomer\n(\n    CustomerId int identity not null,\n    Name VARchar (200)\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE\n)\nGO\n\nCREATE TABLE dbo.dimProduct\n(\n    ProductId int identity not null,\n    Name VARchar (200)\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE\n)\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sqldedic",
+				"poolName": "sqldedic"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
