@@ -1,5 +1,5 @@
 {
-	"name": "Oders",
+	"name": "Orders",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "yissy-WorkspaceDefaultStorage",
