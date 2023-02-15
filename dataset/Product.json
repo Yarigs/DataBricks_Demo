@@ -1,0 +1,35 @@
+{
+	"name": "Product",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "yissy-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "products.json",
+				"fileSystem": "yisfs"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"ProductId": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"ManufacturedCountry": {
+					"type": "string"
+				},
+				"WeightGrams": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}
